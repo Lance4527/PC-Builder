@@ -1,0 +1,173 @@
+/* Body Styles */
+body {
+    padding: 5%;
+    display: grid;
+    grid-template: repeat(5, auto) / repeat(2,50%);
+    grid-gap: 2%;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "ssd hdd"
+        "main main"
+        "footer footer";
+}
+header {
+    grid-area: header;
+    text-align: center;
+    font-family: monospace;
+}
+/*Navigating Menu */
+#nav_menu {
+    grid-area: nav;
+}
+#nav_menu ul {
+    text-align: center;
+    list-style-type: none;
+    display: grid;
+    grid-template: 1fr / repeat(5,auto);
+    grid-column-gap: 13%;
+    justify-content: center;
+    font-family: monospace;
+    font-style: oblique;
+}
+
+/* animation div formats */
+.ssd {
+    grid-area: ssd;
+    width: 15em;
+    height: 25em;
+    justify-self:center;
+    text-align: center;
+}
+.ssd_animated {
+    position: relative;
+    background-color: aqua;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    animation-name: ssd_speed;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes ssd_speed {
+    0% {
+        top: 0em;
+        left: 3em;
+    }
+    50% {
+        top: 15em;
+        left: 3em;
+        width: 7em;
+        height: 1em;
+    }
+    100%{
+        top: 0em;
+        left: 3em;
+    }
+}
+.hdd {
+    grid-area: hdd;
+    width: 15em;
+    height: 25em;
+    justify-self:center;
+    text-align: center;
+}
+.hdd_animated {
+    position: relative;
+    background-color: skyblue;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    animation-name: hdd_speed;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes hdd_speed {
+    0% {
+        top: 0em;
+        left: 2em;
+    }
+    50% {
+        top: 15em;
+        width: 11em;
+        height: 3em;
+        left: 2em;
+    }
+    100%{
+        top: 0em;
+        left: 2em;
+    }
+}
+/* main section */
+main {
+   grid-area: main;
+    text-align: center;
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+main div {
+    padding: 1em;
+    flex-basis: 40%;
+    flex-grow: 2;
+}
+main img {
+    padding: 1em;
+    width: 40%;
+    height: 20%;
+    max-width: 640px;
+    align-self: center;
+}
+/*footer */
+footer {
+    grid-area: footer;
+    text-align: center;
+    font-family: monospace;
+}
+
+.photo_cred {
+    font-size: 70%;
+}
+
+#mobile_menu {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+	body {
+		font-size: 90%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#nav_menu {
+		display: none;
+	}
+    main img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* change background and decrease padding */
+    .slicknav_menu {
+        background: lightcyan !important;
+	    padding: 3px !important;
+    }
+
+    #mobile_menu {
+		display: grid;
+        grid-area: nav;
+	}
+    #mobile_menu ul {
+        background-color: lightcyan;
+        list-style-type: none;
+    }
+    #mobile_menu a {
+        background-color: lightcyan;
+        text-decoration-color: black;
+        color: black;
+    }
+    #mobile_menu a:hover, #mobile_menu a:focus {
+        color: lightsteelblue;

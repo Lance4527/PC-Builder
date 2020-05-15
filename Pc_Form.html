@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PC Builder</title>
+    <link rel="icon" href="images/cooltext349490730305098.png">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+   <header>
+   <h2>PC Builder &#38; Troubleshooting/Repair</h2>
+   <h3>For All PC needs and Inquiries</h3>
+   <p class="home_button"><a href="index.html">Return Home</a></p>
+    </header>
+    <main>
+      <section>
+	    <h1 >PC Order Form</h1>
+	    <p>Fill out the form as completely as possible and we will process your request in a timely manner. Please allow up to 72 hours for a response.</p>
+	    <p>(Asterisks (&#42;) indicate required entries.)</p>
+	    <br>
+	    <form action="Pc_Order_Confirm.html" method="get" id="pc_order">
+	    <fieldset class="contactField">
+	        <legend>How can we contact you?</legend>
+	        <label for="full_name">&#42;Full Name&#58;</label>
+	        <input type="text" name="full_name" id="full_name" autofocus required><br>
+	        <label for="email">&#42;Email&#58;</label>
+	        <input type="email" name="email" id="email" required><br>
+	        <label for="phone">Phone number</label>
+	        <input type="tel" name="phone" id="phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-9999"><br>
+	        <label for="opt">Opt in for promotions?</label>
+	        <select name="opt" id="opt">
+	            <option value="Y">Yes I'd Love to</option>
+	            <option value="N">Not Right Now</option>
+	        </select>
+	    </fieldset>
+	    <fieldset class="processorField">
+	        <legend>Processor Preference</legend>
+	        <label for="processor">Are you interested in AMD or Intel</label><br>
+	        <input type="radio" name="processor" id="processor" value="amd"> AMD
+	        <input type="radio" name="processor" id="processor" value="intel"> Intel <br>
+	        <label for="cpu_speed">How many GHz are you looking to get out of the processor at max?</label><br>
+	        <input type="radio" name="cpu_speed" id="cpu_speed" value="3"> 3.0 GHz<br>
+	        <input type="radio" name="cpu_speed" id="cpu_speed" value="3.5"> 3.5 GHz<br>
+	        <input type="radio" name="cpu_speed" id="cpu_speed" value="4"> 4.0 GHz<br>
+	        <input type="radio" name="cpu_speed" id="cpu_speed" value="4.5"> 4.5 GHz<br>
+	        <label for="cores">How many cores?</label><br>
+	        <input type="radio" name="cores" id="cores" value="2"> Dual Core
+	        <input type="radio" name="cores" id="cores" value="4"> Quad
+	        <input type="radio" name="cores" id="cores" value="8"> Octa Core
+	    </fieldset>
+	    <fieldset class="final_choices">
+	        <legend>Memory, Storage, and Graphic Capability</legend>
+	        <label for="choices">Select RAM, Storage, and Graphic Capabilities&#41;</label><br>
+	        <input type="checkbox" name="choices" id="choices" value="8GB_R"> 8 GB memory
+	        <input type="checkbox" name="choices" id="choices" value="16GB_R"> 16 GB memory
+	        <input type="checkbox" name="choices" id="choices" value="250GB_S"> 250 GB Storage
+	        <input type="checkbox" name="choices" id="choices" value="500GB_S"> 500 GB Storage<br>
+	        <input type="checkbox" name="choices" id="choices" value="1TB_S"> 1 TB Storage<br>
+	        <input type="checkbox" name="choices" id="choices" value="2TB_S"> 2 TB Storage<br>
+	        <input type="checkbox" name="choices" id="choices" value="4TB_S"> 4 TB Storage<br>
+	        <input type="checkbox" name="choices" id="choices" value="1080p"> 1080p &#40;HD&#41;<br>
+	        <input type="checkbox" name="choices" id="choices" value="1440p"> 1440p &#40;QHD&#41;<br>
+	         <input type="checkbox" name="choices" id="choices" value="4k"> 4k &#40;UHD&#41;<br>
+	        <input type="checkbox" 
+	        name="choices" id="choices" value="other"> Other Feautures, please exlpain&#58;<br>
+	        <textarea id="dietary_restrictions"></textarea>
+	    </fieldset>
+	    <fieldset class="textField">
+	        <legend>Comments&#58;</legend>
+	        <label for="comments">Include any additional information such as specific hardware components you would like or if theres a specific size restriction you would prefer&#40;Size cannot be guaranteed but we will do our best&#41;.</label><br>
+	        <textarea name="comments" id="comments"></textarea>
+	    </fieldset>
+	    <fieldset class="buttons">
+	        <legend>Submit Request</legend>
+	        <input type="submit" id="submit" value="Submit">
+	        <input type="reset" id="reset" value="Start Over">
+	    </fieldset>
+	    </form>
+      </section>
+    </main>
+    <footer>
+        <p>&copy; 2020 Pc Builder &#38; Troubleshooting&#47;Repair</p>
+    </footer>
+</body>
+</html>
